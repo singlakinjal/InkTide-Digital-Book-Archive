@@ -1,6 +1,6 @@
 # 🌊 InkTide: Digital Book Archive
 
-**InkTide** is a high-performance web application designed for searching, tracking, and accessing digital literature. The platform integrates metadata from the **Open Library API** with the direct-access capabilities of the **Internet Archive** to create a seamless reading ecosystem.
+**InkTide** is a high-performance web application designed for searching, tracking, and accessing digital literature. The platform integrates metadata from the **Gutendex API** (Project Gutenberg) to create a seamless reading ecosystem.
 
 ---
 
@@ -10,21 +10,16 @@ The objective of this project is to provide a unified interface for the discover
 ---
 
 ### 🔗 API Integration
-The application orchestrates data from the following **Open Library API** endpoints:
-* **Search API:** `https://openlibrary.org/search.json` — For fetching primary book metadata and identifiers.
-* **Works API:** `https://openlibrary.org/works/{id}.json` — For retrieving detailed descriptions and subject matter.
-* **Covers API:** `https://covers.openlibrary.org/b/id/{id}-L.jpg` — For high-resolution visual assets.
-* **Availability Logic:** Integration of `ia` (Internet Archive) identifiers to provide direct EPUB/PDF reading portals.
+The application currently orchestrates data from the following endpoints:
+* **Gutendex API:** `https://gutendex.com/books/` — For fetching primary book metadata, authors, and cover images.
+* **Covers:** Direct mapping of `image/jpeg` formats from the Gutendex results to book cards.
 
 ---
 
-### ✨ Planned Features
-* **🔍 Optimized Search:** Efficient book discovery utilizing debounced input handling to reduce API overhead.
-* **📥 Instant Access:** Automated identification of available digital downloads for public-domain works.
-* **📖 Library Management:** Tools to categorize titles by status (*Want to Read*, *Currently Reading*, or *Read*).
-* **💾 Data Persistence:** Client-side storage of user preferences and library data using the **Web Storage API**.
-* **🌙 Night Mode:** A mobile-first, system-aware dark theme designed for enhanced reading comfort.
-
+### ✨ Core Features (Milestone 2)
+* **📡 Dynamic Fetching:** Real-time retrieval of book archives using the Fetch API.
+* **📱 Responsive Grid:** A fully fluid layout using CSS Grid (`auto-fill`) that adapts to mobile, tablet, and desktop screens..
+* **⏳ Loading States:** Visual feedback provided during data retrieval with an animated loading indicator.
 ---
 
 ### 🛠️ Technical Stack
@@ -32,7 +27,7 @@ The application orchestrates data from the following **Open Library API** endpoi
 | :--- | :--- |
 | **Frontend** | HTML5 / CSS3 (Flexbox & Grid) |
 | **Logic** | Vanilla JavaScript (ES6+) |
-| **Data Source** | Open Library REST API |
+| **Data Source** | Gutendex REST API |
 | **Constraint** | 100% Zero-Loop Policy (Utilizing Array HOFs exclusively) |
 
 ---
@@ -44,10 +39,4 @@ The project is built to run natively in modern web browsers without the need for
 
 ---
 
-### 📅 Project Roadmap
-| Milestone | Focus | Status |
-| :--- | :--- | :--- |
-| **M1** | Project Identity & Documentation | ✅ Completed |
-| **M2** | API Integration & UI Skeleton | ⏳ April 1 |
-| **M3** | Core Search & Tracking Logic | ⏳ April 8 |
-| **M4** | Final Deployment & PWA Polish | ⏳ April 10 |
+
