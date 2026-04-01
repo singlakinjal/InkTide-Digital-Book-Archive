@@ -1,1 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
 
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>INKTIDE</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header>
+        <div class="header-inner">
+            <div class="logo">
+                <span class="logo-icon">📚</span>
+                <span class="logo-text">INKTIDE</span>
+            </div>
+            <nav class="header-actions">
+                <button class="nav-btn" id="myListBtn">📋 My List<span class="header-badge"
+                        id="listCount">0</span></button>
+                <button class="nav-btn" id="favBtn">❤️ Favorites<span class="header-badge"
+                        id="listCount">0</span></button>
+                <button class="theme-toggle" id="themeToggle" title="Toggle theme">🌙</button>
+            </nav>
+        </div>
+    </header>
+
+
+
+    <section class="hero">
+        <div class="hero-inner">
+            <div class="hero-badge">✦ 70,000+ Free Books — No Sign Up Required</div>
+            <h1 class="hero-title">Read &amp; Download <span>Free Books</span></h1>
+           <p class="hero-sub">Classic literature, philosophy, science — read in-app or download ePub &amp; PDF instantly.
+
+            <div class="search-container">
+                <input id="searchInput" type="text" placeholder="Search title, author, or subject...">
+            </div>
+
+            <div class="quick-links">
+                <span>📖 Read Online</span>
+                <span>⬇️ Download ePub</span>
+                <span>📄 Download PDF</span>
+            </div>
+        </div>
+        </div>
+    </section>
+    <div id="book-grid"></div>
+    </main>
+
+
+
+
+    <script src="./script.js"></script>
+</body>
+
+</html>
