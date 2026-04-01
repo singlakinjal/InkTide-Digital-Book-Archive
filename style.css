@@ -206,6 +206,7 @@ header {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(195px, 1fr));
     gap: 28px;
+    grid-template-rows: repeat(auto-fill, minmax(450px, 1fr));
 }
 
 
@@ -213,6 +214,8 @@ header {
     border: 1px solid var(--border);
     border-radius: 6px;
     background-color: var(--surface);
+    height: 100%;
+    overflow: hidden;
 }
 
 .book-image {
@@ -221,12 +224,12 @@ header {
 }
 
 .book-title {
-    font-weight: bold;margin-left: 2px;
+    font-weight: bold;margin-left: 5px;
     margin-bottom: 5px;
     overflow: hidden;
 }
 .book-author{
-    margin-left: 2px;
+    margin-left: 5px;
 }
 
 .books-container {
