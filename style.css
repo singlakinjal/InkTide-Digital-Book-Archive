@@ -10,6 +10,17 @@
     --t: 0.22s ease;
     --text-sub: #6b5e44;
 }
+body.dark-mode {
+    --bg: #121212;
+    --bg2: #1a1a1a;
+    --accent: #ff7043; /* Brighter accent for dark background */
+    --text: #f5f0e8;
+    --surface: #1e1e1e;
+    --border: #333333;
+    --text-sub: #a0a0a0;
+    --free-bg: #1b2e25;
+    --free: #4ade80;
+}
 
 
 * {
@@ -22,6 +33,7 @@ body {
     color: var(--text);
     min-height: 100vh;
     line-height: 1.6;
+    transition: background-color var(--t), color var(--t);
 }
 
 
@@ -205,15 +217,70 @@ header {
 
 .book-image {
     width: 100%;
+    height: 70%;
 }
 
 .book-title {
-    font-weight: bold; 
+    font-weight: bold;margin-left: 2px;
+    margin-bottom: 5px;
+    overflow: hidden;
+}
+.book-author{
+    margin-left: 2px;
 }
 
 .books-container {
-        max-width: 1200px;
-        margin: 0 auto;
-        padding: 40px 24px 80px;
-        position: relative;
-    }
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 40px 24px 80px;
+    position: relative;
+}
+
+
+.hero-stats {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 20px;
+    flex-wrap: wrap;
+}
+
+.hero-stats span {
+    font-size: 0.9rem;
+    color: var(--text-sub);
+    font-weight: 500;
+}
+
+
+#loading {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 60px 20px;
+    width: 100%;
+}
+
+
+.spinner {
+    width: 48px;
+    height: 48px;
+    border: 5px solid var(--border);
+    border-bottom-color: var(--accent);
+    border-radius: 50%;
+    display: inline-block;
+    box-sizing: border-box;
+    animation: rotation 1s linear infinite;
+    margin-bottom: 15px;
+}
+
+@keyframes rotation {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+#loading p {
+    color: var(--text-sub);
+    font-size: 0.9rem;
+}
