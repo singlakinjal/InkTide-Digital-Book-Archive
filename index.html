@@ -12,6 +12,7 @@
 </head>
 
 <body>
+    <!-- header -->
     <header>
         <div class="header-inner">
             <div class="logo">
@@ -29,7 +30,7 @@
     </header>
 
 
-
+    <!-- main hero-->
     <section class="hero">
         <div class="hero-inner">
             <div class="hero-badge">✦ 70,000+ Free Books — No Sign Up Required</div>
@@ -51,6 +52,43 @@
 
     </section>
 
+    <!-- control bar -->
+    <div class="controls-bar">
+        <div class="controls-inner">
+            <span id="resultsInfo" class="results-info">Loading…</span>
+            <div class="controls-group">
+                <!-- Filter -->
+                <div class="control-wrap">
+                    <label for="filterSelect">🗂 Genre</label>
+                    <select id="filterSelect">
+                        <option value="all">All Genres</option>
+                        <option value="fiction">Fiction</option>
+                        <option value="science">Science</option>
+                        <option value="history">History</option>
+                        <option value="philosophy">Philosophy</option>
+                        <option value="poetry">Poetry</option>
+                        <option value="adventure">Adventure</option>
+                        <option value="romance">Romance</option>
+                        <option value="drama">Drama</option>
+                    </select>
+                </div>
+                <!-- Sort -->
+                <div class="control-wrap">
+                    <label for="sortSelect">↕ Sort</label>
+                    <select id="sortSelect">
+                        <option value="default">Default</option>
+                        <option value="title_asc">Title A → Z</option>
+                        <option value="title_desc">Title Z → A</option>
+                        <option value="author_asc">Author A → Z</option>
+                        <option value="downloads_desc">Most Downloaded</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- loading -->
 
     <div id="loading" style="display:none;">
         <div class="spinner"></div>
