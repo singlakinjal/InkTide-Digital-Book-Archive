@@ -2,7 +2,7 @@ const previousBtn = document.getElementById("previous");
 previousBtn.disabled = true;
 const nextBtn = document.getElementById("next");
 let pageNo = document.getElementById("page-no");
-
+const searchInput =document.getElementById("searchInput")
 // Dark mode
 const themeToggle = document.getElementById("themeToggle");
 themeToggle.addEventListener("click", () => {
@@ -29,12 +29,22 @@ function createCard(imgUrl, title, author) {
         </div>`;
 }
 async function fetchapi(url) {
+    // console.log(url)
   if (loading) loading.style.display = "flex";
   bookContainer.innerHTML = "";
   try {
     const response = await fetch(url);
     const data = await response.json();
     const base = data.results;
+    const base_next=data.next
+    const base_previous=data.previous
+    if (!base_next){
+        nextBtn.disabled=true;
+    }
+    if (!base_previous){
+        previousBtn.disabled=true;
+    }
+
 
     bookContainer.innerHTML = base
       .map((result) => {
@@ -56,9 +66,6 @@ async function fetchapi(url) {
 }
 fetchapi(url);
 
-// search
-const query = document.getElementById("searchInput").value;
-const searchApi = url + "?search=" + query;
 
 function nextBtnAction() {
   const x = Number(pageNo.innerText) + 1;
@@ -82,3 +89,14 @@ function prevBtnAction() {
 
 nextBtn.addEventListener("click", nextBtnAction);
 previousBtn.addEventListener("click", prevBtnAction);
+
+
+
+// search
+searchInput.addEventListener("change",(e) => {
+    const query =e.target.value
+    const searchApi = "https://gutendex.com/books/?search=" + query;
+    fetchapi(searchApi)
+})
+// console.log(query)
+// const searchApi = url + "?search=" + query;
