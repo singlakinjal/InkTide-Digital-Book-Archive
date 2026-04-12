@@ -72,7 +72,6 @@ inktide/
 | **Data Source** | Gutendex REST API (Project Gutenberg) |
 | **Deployment** | GitHub Pages |
 | **Constraint** | 100% Zero-Loop Policy — Array HOFs exclusively |
-| **Persistence** | `localStorage` for theme preference |
 
 ---
 
