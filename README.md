@@ -2,7 +2,7 @@
 
 **InkTide** is a high-performance web application designed for searching, tracking, and accessing digital literature. The platform integrates metadata from the **Gutendex API** (Project Gutenberg) to create a seamless reading ecosystem.
 
-> 🚀 **Live Demo:** [https://your-username.github.io/inktide](https://your-username.github.io/inktide)
+> 🚀 **Live Demo:** [https://inktide.netlify.app/](https://inktide.netlify.app/)
 
 ---
 
@@ -80,6 +80,6 @@ The project runs natively in any modern browser with no dependencies or build to
 1. **Clone the repository:** `git clone https://github.com/your-username/inktide.git`
 2. **Launch the application:** Open `index.html` in a standard web browser.
 
-Or visit the live deployment directly: [https://vermillion-monstera-e814a3.netlify.app/](https://vermillion-monstera-e814a3.netlify.app/)
+Or visit the live deployment directly: [https://inktide.netlify.app/](https://inktide.netlify.app/)
 
 ---
